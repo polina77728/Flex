@@ -1,0 +1,284 @@
+div {
+    border: 2px solid gray;
+}
+
+span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.start {
+    display: flex;
+    justify-content: start;
+}
+
+.end {
+    display: flex;
+    justify-content: end;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    display: flex;
+    justify-content: left;
+}
+
+.right {
+    display: flex;
+    justify-content: right;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stretch {
+    display: flex;
+    justify-content: stretch;
+}
+
+
+/* flex-direction */
+
+.content {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #c3c3c3;
+    display: flex;
+  }
+  
+  .box1 {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #col-rev {
+    flex-direction: column-reverse;
+  }
+  
+  #row-rev {
+    flex-direction: row-reverse;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .lightblue {
+    background-color: lightblue;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+
+      /* flex-wrap */
+
+  /* Common Styles */
+.content1,
+.content2,
+.content3 {
+  color: #fff;
+  font: 100 24px/100px sans-serif;
+  height: 150px;
+  width: 897px;
+  text-align: center;
+}
+
+.content1 div,
+.content2 div,
+.content3 div {
+  height: 50%;
+  width: 300px;
+}
+.red1 {
+  background: orangered;
+}
+.green1 {
+  background: yellowgreen;
+}
+.blue1 {
+  background: steelblue;
+}
+
+/* Flexbox Styles */
+.content1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content2 {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.content3 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+/* flex-basis */
+
+.container {
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex {
+    background: #6ab6d8;
+    padding: 10px;
+    margin-bottom: 50px;
+    border: 3px solid #2e86bb;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .flex::after {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 100%;
+    margin-top: 10px;
+    width: 100%;
+    color: #333;
+    font-size: 12px;
+  }
+  
+  .flex1 {
+    flex-basis: auto;
+  }
+  
+  .flex1::after {
+    content: "auto";
+  }
+  
+  .flex2 {
+    flex-basis: max-content;
+  }
+  
+  .flex2::after {
+    content: "max-content";
+  }
+  
+  .flex3 {
+    flex-basis: min-content;
+  }
+  
+  .flex3::after {
+    content: "min-content";
+  }
+  
+  .flex4 {
+    flex-basis: fit-content;
+  }
+  
+  .flex4::after {
+    content: "fit-content";
+  }
+  
+  .flex5 {
+    flex-basis: content;
+  }
+  
+  .flex5::after {
+    content: "content";
+  }
+
+
+  /* align-items: center; */
+  .content8 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #c3c3c3;
+    display: flex;
+    align-items: center;
+  }
+  
+  .box8 {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #col8 {
+    flex-direction: column;
+  }
+  
+  #row8 {
+    flex-direction: row;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .lightblue {
+    background-color: lightblue;
+    height: 100px;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+
+  /* align-items: flex-end; */
+  .content9 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #c3c3c3;
+    display: flex;
+    align-items: flex-end;
+  }
+
+
+                 /* flex-grow */
+  #content2 {
+    display: flex;
+  
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: stretch;
+  }
+  
+  .small {
+    flex-grow: 1;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .double {
+    flex-grow: 2;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+  }

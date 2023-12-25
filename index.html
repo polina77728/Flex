@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-верстка теория</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><span>Flex-верстка</span> определяет способность гибкого элемента растягиваться или сжиматься для заполнения 
+        собой доступного пространства. <br>
+    Во Flex-верстке есть основной контейнер и вложенные в него элементы <br>
+    <br>
+        Модуль CSS flexible box layout определяет модель CSS box, оптимизированную для дизайна пользовательского 
+        интерфейса, и компоновку элементов в одном измерении. В модели гибкой компоновки дочерние элементы гибкого
+         контейнера могут располагаться в любом направлении и могут "изменять" свои размеры, либо увеличиваясь, 
+         чтобы заполнить неиспользуемое пространство, либо сокращаясь, чтобы избежать переполнения родительского. 
+         Можно легко манипулировать как горизонтальным, так и вертикальным выравниванием дочерних элементов.
+    </p>
+    <p>В следующем примере контейнеру присвоено значение display: flex, что означает, что три дочерних элемента 
+        становятся элементами flex. Значение justify-content было установлено равным space-between для равномерного 
+        размещения элементов по главной оси. Между каждым элементом размещается одинаковое пространство, при этом 
+        левый и правый элементы располагаются на одном уровне с краями гибкого контейнера. Вы также можете видеть,
+         что элементы растягиваются по поперечной оси из-за значения по умолчанию align-items равное stretch. 
+         Элементы растягиваются по высоте гибкого контейнера, благодаря чему каждый из них кажется таким же высоким, 
+         как самый высокий элемент.</p>
+
+    <p>Для управления шириной контента и промежутками между ними, растягивающимися горизонтально по главной оси, 
+        используют свойство <span>justify-content</span>. Для управления вертикальным поведением элементов служит
+         свойство <span>aling</span></p>
+         
+    <p>Значения для <span>justify-content</span>:</p>
+    <p><span>start</span> <br>
+    Элементы располагаются вплотную друг к другу по направлению к начальному краю контейнера выравнивания по главной оси.
+        <div class="start">
+            <div class="box">One</div>
+            <div class="box">Two</div>
+            <div class="box">Three
+              <br>has
+              <br>extra
+              <br>text
+            </div>
+          </div>
+
+    <br>
+    <span>end</span> <br>
+    Элементы располагаются вплотную друг к другу по направлению к конечному краю контейнера выравнивания по главной оси.
+        <div class="end">
+            <div class="box">One</div>
+            <div class="box">Two</div>
+            <div class="box">Three
+          <br>has
+          <br>extra
+          <br>text
+        </div>
+      </div>
+
+    <br>
+    <span>flex-start</span> <br>
+    Элементы располагаются вплотную друг к другу по направлению к краю контейнера выравнивания в зависимости от начальной стороны контейнера flex. Это относится только к элементам макета flex. Для элементов, которые не являются дочерними элементами контейнера flex, это значение обрабатывается как start.
+        <div class="flex-start">
+            <div class="box">One</div>
+            <div class="box">Two</div>
+            <div class="box">Three
+            <br>has
+            <br>extra
+            <br>text
+            </div>
+        </div>
+
+        <br>
+    <span>flex-end</span> <br>
+    Элементы располагаются вплотную друг к другу по направлению к краю контейнера выравнивания в зависимости от основной стороны контейнера flex. Это относится только к элементам макета flex. Для элементов, которые не являются дочерними элементами контейнера flex, это значение обрабатывается как end.
+    <div class="flex-end">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three
+        <br>has
+        <br>extra
+        <br>text
+        </div>
+      </div>
+
+    <br>
+    <span>center</span> <br>
+    Элементы располагаются вплотную друг к другу по направлению к центру контейнера выравнивания вдоль главной оси.
+    <div class="center">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three
+          <br>has
+          <br>extra
+          <br>text
+        </div>
+      </div>
+
+    <br>
+    <span>left</span> <br>
+    Элементы располагаются вплотную друг к другу по направлению к левому краю контейнера выравнивания. Когда горизонтальная ось свойства не параллельна встроенной оси, например, когда flex-direction: column; установлено значение, это значение ведет себя следующим образом start.
+    <div class="left">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three
+          <br>has
+          <br>extra
+          <br>text
+        </div>
+      </div>
+
+    <br>
+    <span>right</span> <br>
+    Элементы располагаются вплотную друг к другу по направлению к правому краю контейнера выравнивания по соответствующей оси. Если ось свойства не параллельна встроенной оси (в контейнере grid) или главной оси (в контейнере flexbox), это значение ведет себя как start.
+    <div class="right">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three
+          <br>has
+          <br>extra
+          <br>text
+        </div>
+      </div>
+
+    <br>
+    <span>space-between</span> <br>
+    Элементы равномерно распределены внутри контейнера выравнивания вдоль главной оси. Расстояние между каждой парой соседних элементов одинаковое. Первый элемент находится на одном уровне с основным начальным краем, а последний элемент - на одном уровне с основным конечным краем.
+        <div class="space-between">
+            <div class="box">One</div>
+            <div class="box">Two</div>
+            <div class="box">Three
+            <br>has
+            <br>extra
+            <br>text
+            </div>
+          </div>
+        <br>
+
+    <span>space-around</span> <br>
+    Элементы равномерно распределены внутри контейнера выравнивания вдоль главной оси. Расстояние между каждой парой соседних элементов одинаковое. Пустое пространство перед первым и после последнего элемента равно половине пространства между каждой парой смежных элементов.
+    <div class="space-around">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three
+              <br>has
+              <br>extra
+              <br>text
+            </div>
+          </div>
+        <br>
+
+    <span>space-evenly</span> <br>
+    Элементы равномерно распределены внутри контейнера выравнивания по главной оси. Расстояние между каждой парой смежных элементов, основным начальным краем и первым элементом, а также основным конечным краем и последним элементом, абсолютно одинаковы.
+    <div class="space-evenly">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three
+          <br>has
+          <br>extra
+          <br>text
+        </div>
+      </div>
+    <br>
+
+    <span>stretch</span> <br>
+    Если суммарный размер элементов вдоль главной оси меньше размера контейнера выравнивания, размер элементов любого auto размера увеличивается одинаково (не пропорционально), при этом соблюдаются ограничения, налагаемые max-height/max-width (или эквивалентной функциональностью), так что суммарный размер точно заполняет контейнер выравнивания вдоль главной оси.</p>
+    <div class="stretch">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three
+          <br>has
+          <br>extra
+          <br>text
+        </div>
+      </div>
+    <br>
+
+    <!-- flex-direction -->
+
+    <h3>Свойство flex-direction CSS задает способ размещения элементов flex в контейнере flex, 
+        определяя главную ось и направление (нормальное или обратное).</h3>
+    
+    <p>Принимаются следующие значения: <br>
+
+        <span>row</span><br>
+        Главная ось контейнера flex определяется так, чтобы совпадать с направлением текста. Точки main-start и main-end совпадают с направлением содержимого.
+        <br>
+        <span>row-reverse</span> <br>
+        Работает так же, как row но точки main-start и main-end противоположны направлению содержимого.
+        <br>
+        <span>column</span><br>
+        Основная ось контейнера flex совпадает с осью блока. Точки main-start и main-end такие же, как точки before и after в режиме записи.
+        <br>
+        <span>column-reverse</span> <br>
+        Работает так же, как column но main-start и main-end противоположны направлению содержимого.</p>
+        <h4>This is a Column-Reverse</h4>
+            <div id="col-rev" class="content">
+                <div class="box1 red">A</div>
+                <div class="box1 lightblue">B</div>
+                <div class="box1 yellow">C</div>
+            </div>
+            <h4>This is a Row-Reverse</h4>
+            <div id="row-rev" class="content">
+                <div class="box1 red">A</div>
+                <div class="box1 lightblue">B</div>
+                <div class="box1 yellow">C</div>
+            </div>
+
+            <!-- flex-wrap -->
+
+    <h3>Свойство flex-wrap CSS определяет, будут ли элементы flex принудительно помещаться в одну строку или их можно переносить в несколько строк. <br> Если перенос разрешен, он задает направление, в котором будут располагаться строки.</h3>
+
+    <p>Принимаются следующие значения: <br>
+
+        <span>nowrap</span><br>
+        Элементы flex расположены в одной строке, что может привести к переполнению контейнера flex. Перекрестный запуск эквивалентен start или перед, в зависимости от flex-direction значения. Это значение по умолчанию.
+        <br>
+        <span>wrap</span> <br>
+        Элементы flex разбиваются на несколько строк. Значение cross -start эквивалентно значению start или перед зависимым flex-direction значением, а значение cross-end противоположно указанному значению cross-start.
+        <br>
+        <span>wrap-reverse</span> <br>
+        Ведет себя так же, как wrap но перекрестное начало и перекрестный конец изменяются местами.
+        <br></p>
+
+        <h4>This is an example for flex-wrap:wrap</h4>
+            <div class="content1">
+                <div class="red1">1</div>
+                <div class="green1">2</div>
+                <div class="blue1">3</div>
+            </div>
+            <h4>This is an example for flex-wrap:nowrap</h4>
+            <div class="content2">
+                <div class="red1">1</div>
+                <div class="green1">2</div>
+                <div class="blue1">3</div>
+            </div>
+            <h4>This is an example for flex-wrap:wrap-reverse</h4>
+            <div class="content3">
+                <div class="red1">1</div>
+                <div class="green1">2</div>
+                <div class="blue1">3</div>
+            </div>
+
+        <h4>Свойство <span>flex-flow</span> - это сокращенная форма записи значений свойств flex-direction и flex-wrap</h4>
+
+        <br>
+        <p>Свойство <span>flex-basis CSS</span> задает начальный основной размер элемента flex. 
+            Оно устанавливает размер поля содержимого, если иное не задано с помощью box-sizing.</p>
+
+            <ul class="container">
+                <li class="flex flex1">1: flex-basis test</li>
+                <li class="flex flex2">2: flex-basis test</li>
+                <li class="flex flex3">3: flex-basis test</li>
+                <li class="flex flex4">4: flex-basis test</li>
+                <li class="flex flex5">5: flex-basis test</li>
+              </ul>
+              
+              <ul class="container">
+                <li class="flex flex6">6: flex-basis test</li>
+              </ul>
+
+        <p>Свойство CSS <span>align-items</span> управляет выравниванием элементов по горизонтали
+        относительно родительского контейнера.</p>
+        <div id="row8" class="content8">
+            <div class="box8 red">1</div>
+            <div class="box8 lightblue">2</div>
+            <div class="box8 yellow">3</div>
+            <div class="box8 yellow">4</div>
+            <div class="box8 yellow">5</div>
+            <div class="box8 yellow">6</div>
+        </div>
+        <p> align-items: center;</p>
+
+        <div id="row8" class="content9">
+            <div class="box8 red">1</div>
+            <div class="box8 lightblue">2</div>
+            <div class="box8 yellow">3</div>
+            <div class="box8 yellow">4</div>
+            <div class="box8 yellow">5</div>
+            <div class="box8 yellow">6</div>
+        </div>
+        <p> align-items: flex-end;</p>
+
+        <!-- flex-grow -->
+        
+        <h4>Свойство <span>flex-grow</span></h4>
+        <p>Масштабирует элемент относительно суммы размера всех других элементов в той же строке, которые автоматически
+            корректируются в соответствии с указанным значением.
+        </p>
+
+            <h5>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h5>
+            <div id="content2">
+                <div class="small" style="background-color:red;">A</div>
+                <div class="small" style="background-color:lightblue;">B</div>
+                <div class="small" style="background-color:yellow;">C</div>
+                <div class="double" style="background-color:brown;">D</div>
+                <div class="double" style="background-color:lightgreen;">E</div>
+                <div class="small" style="background-color:brown;">F</div>
+            </div>
+
+          
+            
+              
+    
+</body>
+</html>
